@@ -1,0 +1,11 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'Producer'
+    static_configs:
+      - targets: ['192.168.99.100:5030']
+
+  - job_name: 'Consumer'
+    static_configs:
+      - targets: ['192.168.99.100:5031']
